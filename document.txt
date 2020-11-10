@@ -1,1 +1,39 @@
 https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_gui/py_video_display/py_video_display.html
+
+https://medium.com/analytics-vidhya/image-stitching-with-opencv-and-python-1ebd9e0a6d78
+
+https://docs.opencv.org/3.1.0/dc/dc3/tutorial_py_matcher.html
+
+
+
+1) Frame the video
+2) Take two images
+3) Find overlapping regions in two images
+4) To do this, use SIFT (Scale Invariant Feature Transform) algorithm
+5) Extract keypoints and shift descriptors
+6) Match these keypoints and descriptors
+7) Use FLANN matcher or BFMatcher algorithms
+8) Find best matches(ratio test)
+9) Estimate homography
+10)
+
+
+
+
+
+Traceback (most recent call last):
+  File "code.py", line 102, in <module>
+    stitch_2_images("frame_1.jpg", "frame_100.jpg")
+  File "code.py", line 63, in stitch_2_images
+    sift_descriptor = cv2.xfeatures2d.SIFT_create()
+cv2.error: OpenCV(4.1.0) ../opencv_contrib/modules/xfeatures2d/src/sift.cpp:1207: error: (-213:The function/feature is not implemented) This algorithm is patented and is excluded in this configuration; Set OPENCV_ENABLE_NONFREE CMake option and rebuild the library in function 'create'
+
+
+
+(base) aysegul@aysegul:~/Desktop/my projects/Video-to-Panorama$ python
+Python 3.7.1 | packaged by conda-forge | (default, Nov 13 2018, 18:15:35)
+[GCC 4.8.2 20140120 (Red Hat 4.8.2-15)] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import cv2
+>>> cv2.__version__
+'4.1.0'
